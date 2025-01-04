@@ -1,10 +1,9 @@
 n = int(input())
-word_list = []
+words = set()
 for _ in range(n):
     word = input()
-    if word not in word_list:
-        word_list.append(word)
-word_list.sort(key=lambda x: (len(x), x))
+    words.add(word)
+words = sorted(words, key=lambda x: (len(x), x))
 
-for w in word_list:
+for w in words:
     print(w)
