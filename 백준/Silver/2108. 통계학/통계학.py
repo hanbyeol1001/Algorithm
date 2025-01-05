@@ -1,10 +1,11 @@
+import sys
 from statistics import mean, median, multimode
 
-n = int(input())
-value = []
-for i in range(n) :
-    k = int(input())
-    value.append(k)
+input = sys.stdin.read
+data = list(map(int, input().split()))
+
+n = data[0]
+value = data[1:]
 value.sort()
 
 # 산술평균
