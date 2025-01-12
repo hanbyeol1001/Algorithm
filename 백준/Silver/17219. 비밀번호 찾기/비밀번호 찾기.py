@@ -8,5 +8,5 @@ for _ in range(n):
     address[url] = password
 
 for _ in range(m):
-    url = sys.stdin.readline().strip()
-    print(address[url])
+    url_ = sys.stdin.readline().strip()
+    print(address[url_])
