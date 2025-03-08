@@ -14,9 +14,6 @@ def func(N, info):
     '''
     line = []
     for i in range(N, 0, -1):
-        if info[i-1] == 0:
-            line.insert(0, i)
-            continue
         line.insert(info[i-1], i)
     return line
 
@@ -26,5 +23,4 @@ if __name__ == '__main__':
     heights = list(map(int, input().split()))
 
     answer = func(n, heights)
-    for i in answer:
-        print(i, end=' ')
+    print(*answer)
